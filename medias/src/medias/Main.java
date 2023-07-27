@@ -4,25 +4,19 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import javax.swing.JOptionPane;
 
+
+/*Para um trecho de texto digitado */
+
+
 public class Main {
 
     public static void main(String[] args) {
-        //media();
-
-        /*Double [] notas = new Double[1];
-        String resp = "";
+       menorMaiorMedia();
+    }
+     
+    
+    public static void menorMaiorMedia(){
         
-        int contador = 0;
-        while(!resp.equals("-1")){  
-                    
-        resp = (JOptionPane.showInputDialog("digite a nota ou -1 para encerrar: "));
-        if(!resp.equals("-1")){
-            if(notas.length == contador){
-                Double [] newNotas = new Double[contador]
-            }*/
-//////////////////////////////////////////////////////////////////////////////////
-        //Utilizando ArrayList, pegar quantos numeros inteiros que usuario quiser digitar
-        //no final indetifique qual menor numero , qual o maior numero e qual a media dos inteiros.
         ArrayList<Integer> numbers = new ArrayList<>();
         String resp = "";
 
@@ -44,7 +38,7 @@ public class Main {
             }
 
         }
-        System.out.println(menor);
+        //System.out.println(menor);
 
         Integer maior = numbers.get(0);
         for (int i = 1; i > numbers.size(); i++) {
@@ -53,7 +47,7 @@ public class Main {
             }
 
         }
-        System.out.println(maior);
+        //System.out.println(maior);
 
         Double media = 0.0;
         Iterator<Integer> it = numbers.iterator();
@@ -71,13 +65,3 @@ public class Main {
 
 }
 
-// crie um program com JoptionPane , que peca 3 notas e informe a media do aluno.
-
-/*public static void media() {
-        Double[] notas = new Double[3];
-        for (int i = 0; i <= 2; i++) {
-            notas[i] = Double.parseDouble(JOptionPane.showInputDialog("Digite a a " + (i + 1) + " nota"));
-            Double media = (notas[0] + notas[1] + notas[2]) / 3;
-            JOptionPane.showMessageDialog(null, "A média do aluno foi de " + media + ".");
-}
-}*/
